@@ -461,7 +461,7 @@ void HelloWorld::loginViaFacebook()
 
 void HelloWorld::logoutFromFacebook()
 {
-    EziSocialObject::sharedObject()->perfromLogoutFromFacebook();
+    EziSocialObject::sharedObject()->performLogoutFromFacebook();
 }
 
 void HelloWorld::postMessageOnFacebookWall()

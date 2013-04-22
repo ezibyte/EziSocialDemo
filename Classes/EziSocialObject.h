@@ -34,7 +34,7 @@ public:
     EziEmailDelegate* getEmailDelegate();
     
     void performLoginUsingFacebook();
-    void perfromLogoutFromFacebook();
+    void performLogoutFromFacebook();
     
     void fetchFBUserDetails();
     

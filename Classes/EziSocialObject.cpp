@@ -262,7 +262,7 @@ void EziSocialObject::performLoginUsingFacebook()
 }
 
 
-void EziSocialObject::perfromLogoutFromFacebook()
+void EziSocialObject::performLogoutFromFacebook()
 {
     EziSocialWrapperNS::logoutFromFacebook(internalFBSessionCallback);
 }
