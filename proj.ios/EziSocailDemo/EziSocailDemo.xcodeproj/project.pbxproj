@@ -38,7 +38,7 @@
 		CB030FDA1723E27A000A468D /* Send_Email_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = CB030FBB1723E27A000A468D /* Send_Email_Button.png */; };
 		CB030FDB1723E27A000A468D /* TW_Tweet_Message_Button_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CB030FBC1723E27A000A468D /* TW_Tweet_Message_Button_Pressed.png */; };
 		CB030FDC1723E27A000A468D /* TW_Tweet_Message_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = CB030FBD1723E27A000A468D /* TW_Tweet_Message_Button.png */; };
-		CB1FF1461731CFC7009B01C9 /* libEziSocialPlugin_merged.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1FF1451731CFC7009B01C9 /* libEziSocialPlugin_merged.a */; };
+		CB1FF1481731DD9E009B01C9 /* libEziSocialPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1FF1471731DD9E009B01C9 /* libEziSocialPlugin.a */; };
 		CB3500B11723661400A99B9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3500B01723661400A99B9C /* QuartzCore.framework */; };
 		CB3500B31723661400A99B9C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3500B21723661400A99B9C /* OpenGLES.framework */; };
 		CB3500B51723661400A99B9C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3500B41723661400A99B9C /* OpenAL.framework */; };
@@ -293,7 +293,7 @@
 		CB030FBC1723E27A000A468D /* TW_Tweet_Message_Button_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TW_Tweet_Message_Button_Pressed.png; sourceTree = "<group>"; };
 		CB030FBD1723E27A000A468D /* TW_Tweet_Message_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TW_Tweet_Message_Button.png; sourceTree = "<group>"; };
 		CB1FF134172EC0D1009B01C9 /* JNI_EziSocialManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JNI_EziSocialManager.cpp; sourceTree = "<group>"; };
-		CB1FF1451731CFC7009B01C9 /* libEziSocialPlugin_merged.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEziSocialPlugin_merged.a; sourceTree = "<group>"; };
+		CB1FF1471731DD9E009B01C9 /* libEziSocialPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEziSocialPlugin.a; sourceTree = "<group>"; };
 		CB3500AD1723661400A99B9C /* EziSocailDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EziSocailDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3500B01723661400A99B9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB3500B21723661400A99B9C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -798,7 +798,7 @@
 				CB3500BF1723661400A99B9C /* CoreGraphics.framework in Frameworks */,
 				CB3502231723661600A99B9C /* libcurl.a in Frameworks */,
 				CB3502251723661600A99B9C /* libwebp.a in Frameworks */,
-				CB1FF1461731CFC7009B01C9 /* libEziSocialPlugin_merged.a in Frameworks */,
+				CB1FF1481731DD9E009B01C9 /* libEziSocialPlugin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,7 +917,7 @@
 		CB3500D91723661400A99B9C /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				CB1FF1451731CFC7009B01C9 /* libEziSocialPlugin_merged.a */,
+				CB1FF1471731DD9E009B01C9 /* libEziSocialPlugin.a */,
 				CB3503A7172366C200A99B9C /* EziSocialManager.h */,
 				CB3503A8172366C200A99B9C /* Reachability.h */,
 				CB3500DA1723661400A99B9C /* AppController.h */,
