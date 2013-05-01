@@ -35,6 +35,7 @@
 //#define ENABLE_MAIL_FUNCTIONALITY
 //#define ENABLE_TWITTER_FUNCTIONALITY
 
+#define KEY_FB_USER_ERROR               "error"
 #define KEY_FB_USER_NAME                "username"
 #define KEY_FB_USER_EMAIL               "email"
 #define KEY_FB_USER_GENDER              "gender"
@@ -115,8 +116,8 @@ namespace EziSocialWrapperNS
                        unsigned long long score);
     
         // User details
-        void fetchUserDetails(FBUserDetailCallback callback);
-        
+        void fetchUserDetails(FBUserDetailCallback callback, bool getEmailIDAlso);
+    
         // User login / logout 
         void loginWithFacebook(FBSessionCallback callback);
         void logoutFromFacebook(FBSessionCallback callback);
@@ -139,6 +140,9 @@ namespace EziSocialWrapperNS
         void sendEmail(const char* subject, const char* messageBody, const char* recipents, MailCallback callback);
     
         bool networkAvailableForHost(const char* hostURL);
+    
+        // Check if session is active in Facebook. If not then use need to make user relogin.
+        bool isFacebookSessionActive();
 }
 
 #endif

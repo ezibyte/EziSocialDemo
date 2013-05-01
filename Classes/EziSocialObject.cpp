@@ -283,9 +283,9 @@ void EziSocialObject::performLogoutFromFacebook()
     EziSocialWrapperNS::logoutFromFacebook(internalFBSessionCallback);
 }
 
-void EziSocialObject::fetchFBUserDetails()
+void EziSocialObject::fetchFBUserDetails(bool askForEmailID)
 {
-    EziSocialWrapperNS::fetchUserDetails(internalFBUserDetailCallBack);
+    EziSocialWrapperNS::fetchUserDetails(internalFBUserDetailCallBack, askForEmailID);
 }
 
 void EziSocialObject::getListOfFriendsUsingFBApp()
@@ -350,6 +350,12 @@ void EziSocialObject::openFacebookPage(const char* pageID, bool checkPageLikeOnA
         }
     }
 }
+
+bool EziSocialObject::isFacebookSessionActive()
+{
+    return EziSocialWrapperNS::isFacebookSessionActive();
+}
+
 
 // ---------------------------------------------------------
     #pragma mark - Twitter Methods

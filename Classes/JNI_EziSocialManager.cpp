@@ -174,6 +174,27 @@ void EziSocialWrapperNS::sendEmail(const char* subject,
 }
 
 
+bool EziSocialWrapperNS::isFacebookSessionActive()
+{
+    cocos2d::JniMethodInfo t;
+    if (cocos2d::JniHelper::getStaticMethodInfo(t,
+                                                "com/ezibyte/social/EziSocialManager",
+                                                "isFacebookSessionActive",
+                                                "(J)Z"))
+    {
+        jlong arg = (long)(void*)0;
+        jboolean result = t.env->CallStaticBooleanMethod(t.classID, t.methodID, arg);
+        t.env->DeleteLocalRef(t.classID);
+        
+        return (result == JNI_TRUE);
+    }
+    else
+    {
+        return false;
+    }
+    
+}
+
 bool EziSocialWrapperNS::networkAvailableForHost(const char* hostURL)
 {
     cocos2d::JniMethodInfo t;
@@ -195,40 +216,20 @@ bool EziSocialWrapperNS::networkAvailableForHost(const char* hostURL)
         return false;
     }
     
-    /*
-    cocos2d::JniMethodInfo t;
-    if (cocos2d::JniHelper::getMethodInfo(t,
-                                          "com/ezibyte/social/EziSocialManager",
-                                          "checkNetworkStatusInJava",
-                                          "()V"))
-    {
-        jstring  arg = t.env->NewStringUTF(hostURL);
-        //jboolean ret = t.env->CallBooleanMethod(t.classID, t.methodID);
-        t.env->CallStaticVoidMethod(t.classID, t.methodID);
-        t.env->DeleteLocalRef(arg);
-        t.env->DeleteLocalRef(t.classID);
-
-        //return ret == JNI_TRUE;
-        return JNI_TRUE;
-    }
-    else
-    {
-        return false;
-    }
-     */
 }
 
 // User details
-void EziSocialWrapperNS::fetchUserDetails(EziSocialWrapperNS::FBUserDetailCallback callback)
+void EziSocialWrapperNS::fetchUserDetails(EziSocialWrapperNS::FBUserDetailCallback callback, bool getEmailIDAlso)
 {
     cocos2d::JniMethodInfo t;
     if (cocos2d::JniHelper::getStaticMethodInfo(t,
                                                 "com/ezibyte/social/EziSocialManager",
                                                 "getUserDetails",
-                                                "(J)V"))
+                                                "(JZ)V"))
     {
         jlong arg = (long)(void*)callback;
-        t.env->CallStaticVoidMethod(t.classID, t.methodID, arg);
+        jboolean arg2 = getEmailIDAlso;
+        t.env->CallStaticVoidMethod(t.classID, t.methodID, arg, arg2);
         t.env->DeleteLocalRef(t.classID);
     }
 }

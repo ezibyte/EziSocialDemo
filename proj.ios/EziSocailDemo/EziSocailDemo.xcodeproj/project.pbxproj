@@ -38,6 +38,7 @@
 		CB030FDA1723E27A000A468D /* Send_Email_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = CB030FBB1723E27A000A468D /* Send_Email_Button.png */; };
 		CB030FDB1723E27A000A468D /* TW_Tweet_Message_Button_Pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = CB030FBC1723E27A000A468D /* TW_Tweet_Message_Button_Pressed.png */; };
 		CB030FDC1723E27A000A468D /* TW_Tweet_Message_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = CB030FBD1723E27A000A468D /* TW_Tweet_Message_Button.png */; };
+		CB1FF1461731CFC7009B01C9 /* libEziSocialPlugin_merged.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1FF1451731CFC7009B01C9 /* libEziSocialPlugin_merged.a */; };
 		CB3500B11723661400A99B9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3500B01723661400A99B9C /* QuartzCore.framework */; };
 		CB3500B31723661400A99B9C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3500B21723661400A99B9C /* OpenGLES.framework */; };
 		CB3500B51723661400A99B9C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3500B41723661400A99B9C /* OpenAL.framework */; };
@@ -248,7 +249,6 @@
 		CB3503A21723665500A99B9C /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB35039A1723665500A99B9C /* AppDelegate.cpp */; };
 		CB3503A31723665500A99B9C /* EziSocialObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB35039E1723665500A99B9C /* EziSocialObject.cpp */; };
 		CB3503A41723665500A99B9C /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB3503A01723665500A99B9C /* HelloWorldScene.cpp */; };
-		CB3503A6172366AC00A99B9C /* libEziSocialPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3503A5172366AC00A99B9C /* libEziSocialPlugin.a */; };
 		CB3503AA172366DD00A99B9C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3503A9172366DD00A99B9C /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CB3503AC172366EA00A99B9C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3503AB172366EA00A99B9C /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CB3503AE1723671600A99B9C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3503AD1723671600A99B9C /* Security.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -257,6 +257,7 @@
 		CB3503B4172367CA00A99B9C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3503B3172367CA00A99B9C /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CB3503B61723688000A99B9C /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3503B51723688000A99B9C /* Twitter.framework */; };
 		CB3503B8172368AC00A99B9C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3503B7172368AC00A99B9C /* SystemConfiguration.framework */; };
+		CBAE1DFE17267A1A00CC4333 /* ezisocial.ios in Resources */ = {isa = PBXBuildFile; fileRef = CBAE1DFD17267A1A00CC4333 /* ezisocial.ios */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -291,6 +292,8 @@
 		CB030FBB1723E27A000A468D /* Send_Email_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Send_Email_Button.png; sourceTree = "<group>"; };
 		CB030FBC1723E27A000A468D /* TW_Tweet_Message_Button_Pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TW_Tweet_Message_Button_Pressed.png; sourceTree = "<group>"; };
 		CB030FBD1723E27A000A468D /* TW_Tweet_Message_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TW_Tweet_Message_Button.png; sourceTree = "<group>"; };
+		CB1FF134172EC0D1009B01C9 /* JNI_EziSocialManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = JNI_EziSocialManager.cpp; sourceTree = "<group>"; };
+		CB1FF1451731CFC7009B01C9 /* libEziSocialPlugin_merged.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEziSocialPlugin_merged.a; sourceTree = "<group>"; };
 		CB3500AD1723661400A99B9C /* EziSocailDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EziSocailDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3500B01723661400A99B9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB3500B21723661400A99B9C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -758,7 +761,6 @@
 		CB35039F1723665500A99B9C /* EziSocialObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EziSocialObject.h; sourceTree = "<group>"; };
 		CB3503A01723665500A99B9C /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
 		CB3503A11723665500A99B9C /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
-		CB3503A5172366AC00A99B9C /* libEziSocialPlugin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEziSocialPlugin.a; sourceTree = "<group>"; };
 		CB3503A7172366C200A99B9C /* EziSocialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EziSocialManager.h; sourceTree = "<group>"; };
 		CB3503A8172366C200A99B9C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CB3503A9172366DD00A99B9C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -769,6 +771,8 @@
 		CB3503B3172367CA00A99B9C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		CB3503B51723688000A99B9C /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		CB3503B7172368AC00A99B9C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CBAE1DFD17267A1A00CC4333 /* ezisocial.ios */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ezisocial.ios; path = "../../../../../Projects/Plugins/Social/Keys/kaiwei.lin@gmail.com/ezisocial.ios"; sourceTree = "<group>"; };
+		CBAE1DFF17267A2400CC4333 /* ezisocial.and */ = {isa = PBXFileReference; lastKnownFileType = text; name = ezisocial.and; path = "../../../../../Projects/Plugins/Social/Keys/kaiwei.lin@gmail.com/ezisocial.and"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -794,7 +798,7 @@
 				CB3500BF1723661400A99B9C /* CoreGraphics.framework in Frameworks */,
 				CB3502231723661600A99B9C /* libcurl.a in Frameworks */,
 				CB3502251723661600A99B9C /* libwebp.a in Frameworks */,
-				CB3503A6172366AC00A99B9C /* libEziSocialPlugin.a in Frameworks */,
+				CB1FF1461731CFC7009B01C9 /* libEziSocialPlugin_merged.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +808,8 @@
 		CB030F9E1723E230000A468D /* Shared Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CBAE1DFD17267A1A00CC4333 /* ezisocial.ios */,
+				CBAE1DFF17267A2400CC4333 /* ezisocial.and */,
 				CB030F9F1723E27A000A468D /* CloseNormal.png */,
 				CB030FA01723E27A000A468D /* CloseSelected.png */,
 				CB030FA11723E27A000A468D /* FB_Action_Menu_Button_Pressed.png */,
@@ -911,9 +917,9 @@
 		CB3500D91723661400A99B9C /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				CB1FF1451731CFC7009B01C9 /* libEziSocialPlugin_merged.a */,
 				CB3503A7172366C200A99B9C /* EziSocialManager.h */,
 				CB3503A8172366C200A99B9C /* Reachability.h */,
-				CB3503A5172366AC00A99B9C /* libEziSocialPlugin.a */,
 				CB3500DA1723661400A99B9C /* AppController.h */,
 				CB3500DB1723661400A99B9C /* AppController.mm */,
 				CB3500DD1723661400A99B9C /* RootViewController.h */,
@@ -1833,6 +1839,7 @@
 				CB35039F1723665500A99B9C /* EziSocialObject.h */,
 				CB3503A01723665500A99B9C /* HelloWorldScene.cpp */,
 				CB3503A11723665500A99B9C /* HelloWorldScene.h */,
+				CB1FF134172EC0D1009B01C9 /* JNI_EziSocialManager.cpp */,
 			);
 			name = Classes;
 			path = "/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/Classes";
@@ -1930,6 +1937,7 @@
 				CB030FDA1723E27A000A468D /* Send_Email_Button.png in Resources */,
 				CB030FDB1723E27A000A468D /* TW_Tweet_Message_Button_Pressed.png in Resources */,
 				CB030FDC1723E27A000A468D /* TW_Tweet_Message_Button.png in Resources */,
+				CBAE1DFE17267A1A00CC4333 /* ezisocial.ios in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2199,6 +2207,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Paras Mendiratta (29EMF6F4AK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paras Mendiratta (29EMF6F4AK)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2209,6 +2219,7 @@
 				GCC_PREFIX_HEADER = EziSocailDemo/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = EziSocailDemo/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EziSocailDemo/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -2220,6 +2231,8 @@
 					"-lsqlite3",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D339743E-423C-4E06-A51F-209F0E6B8548";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D339743E-423C-4E06-A51F-209F0E6B8548";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2228,6 +2241,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Paras Mendiratta (29EMF6F4AK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paras Mendiratta (29EMF6F4AK)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2237,6 +2252,7 @@
 				GCC_PREFIX_HEADER = EziSocailDemo/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = EziSocailDemo/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/EziSocailDemo/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -2248,6 +2264,8 @@
 					"-lsqlite3",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D339743E-423C-4E06-A51F-209F0E6B8548";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D339743E-423C-4E06-A51F-209F0E6B8548";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

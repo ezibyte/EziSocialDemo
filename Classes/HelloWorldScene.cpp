@@ -516,6 +516,17 @@ void HelloWorld::getListOfFriendsUsingThisApp()
 
 void HelloWorld::postScore()
 {
+    bool sessionOn = EziSocialObject::sharedObject()->isFacebookSessionActive();
+    
+    if (sessionOn)
+    {
+        CCLOG("Session is active.");
+    }
+    else
+    {
+        CCLOG("Session is not active.");
+    }
+    
     EziSocialObject::sharedObject()->postScore(rand()%1000000);
 }
 
@@ -526,7 +537,7 @@ void HelloWorld::getHighScores()
 
 void HelloWorld::fetchFBUserDetails()
 {
-    EziSocialObject::sharedObject()->fetchFBUserDetails();
+    EziSocialObject::sharedObject()->fetchFBUserDetails(true);
 }
 
 void HelloWorld::openFacebookPage()
@@ -552,6 +563,16 @@ void HelloWorld::menuCloseCallback(CCObject* pSender)
 void HelloWorld::loginViaTwitter()
 {
     EziSocialObject::sharedObject()->tweet("Twitter Test Message", "");
+    bool sessionOn = EziSocialObject::sharedObject()->isFacebookSessionActive();
+    
+    if (sessionOn)
+    {
+        CCLOG("Session is active.");
+    }
+    else
+    {
+        CCLOG("Session is not active.");
+    }
     //CCMessageBox("Menu Action: Login Via Twitter pressed", "Login - Twitter");
 }
 
@@ -620,6 +641,12 @@ void HelloWorld::fbUserDetailCallback(CCDictionary* data)
 {
     if (data)
     {
+        if (data->objectForKey(KEY_FB_USER_ERROR))
+        {
+            CCMessageBox(((CCString*)(data->objectForKey(KEY_FB_USER_ERROR)))->getCString(), "Error");
+            return;
+        }
+        
         mUsername->setString(((CCString*)(data->objectForKey(KEY_FB_USER_NAME)))->getCString());
         mGender->setString(((CCString*)(data->objectForKey(KEY_FB_USER_GENDER)))->getCString());
         mHometown->setString(((CCString*)(data->objectForKey(KEY_FB_USER_HOMETOWN)))->getCString());
@@ -633,6 +660,12 @@ void HelloWorld::fbUserDetailCallback(CCDictionary* data)
         
         CCString* name = CCString::createWithFormat("%s %s", mFirstName->getString(), mLastName->getString(), NULL);
         mName->setString(name->getCString());
+        
+        
+        if (data->objectForKey(KEY_FB_USER_EMAIL))
+        {
+            CCLOG("User email ID = %s", ((CCString*)(data->objectForKey(KEY_FB_USER_EMAIL)))->getCString());
+        }
         
         this->showUserDetailPage();
     }

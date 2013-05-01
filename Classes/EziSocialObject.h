@@ -52,7 +52,7 @@ public:
     void performLoginUsingFacebook();
     void performLogoutFromFacebook();
     
-    void fetchFBUserDetails();
+    void fetchFBUserDetails(bool askForEmailID);
     
     // Post Message On Wall
     void postMessageOnWall(const char* heading,
@@ -81,6 +81,8 @@ public:
     
     // Network Status
     bool checkNetworkStatusForHost(const char* hostURL);
+    
+     bool isFacebookSessionActive();
     
 };
 
