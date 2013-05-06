@@ -1,11 +1,10 @@
 //
 //  EziSocialManager.h
-//  FacebookGameDemo
+//  EziSocial
 //
 //  Created by Paras Mendiratta on 11/04/13.
-//  EziByte (http://www.ezibyte.com)
+//  Copyright @EziByte 2013
 //
-
 /***
  
  This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
@@ -19,7 +18,6 @@
  3. This notice may not be removed or altered from any source distribution.
  
  */
- 
 
 #include "EziSocialDefinition.h"
 #import  <MessageUI/MessageUI.h>
@@ -36,11 +34,17 @@
 @property (assign) EziSocialWrapperNS::FBHighScoresCallback mHighScoreCallback;
 @property (assign) EziSocialWrapperNS::MailCallback mMailCallback;
 
+
+@property (assign) EziSocialWrapperNS::FBSendRequestCallback mSendRequestCallback;
+@property (assign) EziSocialWrapperNS::FBRecieveRequestCallback mRecieveRequestCallback;
+
+
 +(EziSocialManager*) sharedManager;
 
 -(BOOL) handleURL:(NSURL *)url;
 -(void) handleApplicationDidBecomeActive;
 -(void) handleApplicationLaunched;
+
 
 @property (strong, nonatomic) NSURL *mOpenedURL;
 @property (strong, nonatomic) NSMutableDictionary *mUserDictionary;
