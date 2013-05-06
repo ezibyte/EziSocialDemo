@@ -10,7 +10,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/EziSocialObject.cpp \
                    ../../Classes/JNI_EziSocialManager.cpp \
-                   ../../Classes/HelloWorldScene.cpp
+                   ../../Classes/HelloWorldScene.cpp \
+                   ../../Classes/FriendList.cpp
                    
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes                   
 

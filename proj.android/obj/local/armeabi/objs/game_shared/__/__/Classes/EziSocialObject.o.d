@@ -199,7 +199,82 @@ obj/local/armeabi/objs/game_shared/__/__/Classes/EziSocialObject.o: \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/touch_dispatcher/CCTouchDispatcher.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/CCScheduler.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h \
- jni/../../Classes/EziSocialDefinition.h
+ jni/../../Classes/EziSocialDefinition.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/cocos-ext.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/ExtensionMacros.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBFileLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCInvocation.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/ExtensionMacros.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBReader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequence.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequenceProperty.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBKeyframe.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBValue.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBMemberVariableAssigner.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBReader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSelectorResolver.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCControlButtonLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCControlLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControl.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCInvocation.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControlUtils.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControlButton.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControl.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCScale9Sprite.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCControlLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLabelBMFontLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLabelTTFLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerColorLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerGradientLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuItemImageLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuItemLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuItemLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoaderLibrary.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoaderListener.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCParticleSystemQuadLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCScale9SpriteLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCScale9SpriteLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCScale9Sprite.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCScrollViewLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCScrollView/CCScrollView.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCSpriteLoader.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBAnimationManager.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBKeyframe.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequence.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequenceProperty.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBValue.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCData.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNode+CCBRelativePositioning.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlExtensions.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCScale9Sprite.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControl.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlButton.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlColourPicker.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlUtils.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlHuePicker.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCInvocation.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlPotentiometer.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlSlider.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlStepper.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlSwitch.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCScrollView.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCTableView.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCScrollView.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCTableViewCell.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCSorting.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCEditBox/CCEditBox.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCEditBox/../CCControlExtension/CCControlExtensions.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpRequest.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpRequest.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpClient.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h
 
 jni/../../Classes/EziSocialObject.h:
 
@@ -600,3 +675,153 @@ jni/../../Classes/EziSocialDelegate.h:
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h:
 
 jni/../../Classes/EziSocialDefinition.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/cocos-ext.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/ExtensionMacros.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBFileLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCInvocation.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/ExtensionMacros.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBReader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequence.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequenceProperty.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBKeyframe.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBValue.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBMemberVariableAssigner.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBReader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSelectorResolver.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCControlButtonLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCControlLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControl.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCInvocation.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControlUtils.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControlButton.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCControl.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCScale9Sprite.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCControlLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLabelBMFontLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLabelTTFLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerColorLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerGradientLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCLayerLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuItemImageLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuItemLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuItemLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCMenuLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoaderLibrary.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNodeLoaderListener.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCParticleSystemQuadLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCScale9SpriteLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCScale9SpriteLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCControlExtension/CCScale9Sprite.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCScrollViewLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/../GUI/CCScrollView/CCScrollView.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCSpriteLoader.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBAnimationManager.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBKeyframe.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequence.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBSequenceProperty.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCBValue.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCData.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/CCBReader/CCNode+CCBRelativePositioning.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlExtensions.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCScale9Sprite.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControl.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlButton.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlColourPicker.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlUtils.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlHuePicker.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCInvocation.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlPotentiometer.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlSlider.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlStepper.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCControlExtension/CCControlSwitch.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCScrollView.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCTableView.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCScrollView.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCTableViewCell.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCScrollView/CCSorting.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCEditBox/CCEditBox.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/GUI/CCEditBox/../CCControlExtension/CCControlExtensions.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpRequest.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpRequest.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpClient.h:
+
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h:
