@@ -49,11 +49,17 @@ public:
     virtual void fbSessionCallback(int responseCode);
     virtual void fbUserDetailCallback(cocos2d::CCDictionary* data);
     virtual void fbMessageCallback(int responseCode);
-    virtual void fbChallengeCallback(int responseCode);
-    virtual void fbGiftCallback(int responseCode);
     virtual void fbPageLikeCallback(int responseCode);
     virtual void fbFriendsCallback(cocos2d::CCArray* friends);
     virtual void fbHighScoresCallback(cocos2d::CCArray* highScores);
+    virtual void fbUserPhotoCallback(const char *userPhotoPath);
+    
+    virtual void fbSendRequestCallback(int responseCode, cocos2d::CCArray* friendsGotRequests);
+    virtual void fbRecieveRequestCallback(int responseCode,
+                                          const char* message,
+                                          const char* senderName,
+                                          cocos2d::CCDictionary* dataDictionary);
+    
     
     // EMail Delegate
     virtual void mailCallback(int responseCode);
@@ -62,6 +68,7 @@ public:
     
 private:
     
+    const char* profileID;
     
     float SCREEN_WIDTH;
     float SCREEN_HEIGHT;
@@ -93,6 +100,8 @@ private:
     
     cocos2d::CCMenu* mFBActionMenu;
     
+    cocos2d::CCSprite *mBallSprite;
+    
     
     // Preparing Pages
     void prepareLoginPage();
@@ -120,12 +129,17 @@ private:
     void postScore();
     void getHighScores();
     void openFacebookPage();
+    void getUserPhoto();
+    
+    // Facebook Requests
+    void sendGiftsToFriends();
+    void challengeFriends();
+    void inviteFriends();
+    
+    void checkSessionStatus();
     
     // Twitter Action Items
-    void loginViaTwitter();
     void tweetMessage();
-    void logoutFromTwitter();
-    void checkIfUserFollowingMyTwitterID();
     
     // Sending Email
     void sendEmail();
