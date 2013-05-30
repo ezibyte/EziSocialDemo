@@ -36,7 +36,8 @@ public class EziSocialDemo extends Cocos2dxActivity
 	{
 		super.onCreate(savedInstanceState);
 		EziSocialManager.setApplicationID(this.getApplicationContext().getString(R.string.app_id));
-		EziSocialManager.setEnableDebugLogs(false);
+		EziSocialManager.setEnableDebugLogs(true);
+		EziSocialManager.setCheckIncomingRequestsWhenApplicationBecomeActive(true);
 	}
 
 	static

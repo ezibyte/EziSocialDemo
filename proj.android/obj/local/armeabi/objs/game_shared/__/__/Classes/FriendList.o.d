@@ -303,8 +303,10 @@ obj/local/armeabi/objs/game_shared/__/__/Classes/FriendList.o: \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpClient.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h \
  jni/../../Classes/EziSocialDelegate.h \
- jni/../../Classes/HelloWorldScene.h jni/../../Classes/EziSocialObject.h \
- jni/../../Classes/EziSocialDefinition.h
+ jni/../../Classes/EziFacebookUser.h jni/../../Classes/HelloWorldScene.h \
+ jni/../../Classes/EziSocialObject.h \
+ jni/../../Classes/EziSocialDefinition.h \
+ jni/../../Classes/EziFacebookFriend.h
 
 jni/../../Classes/FriendList.h:
 
@@ -914,8 +916,12 @@ jni/../../Classes/FriendList.h:
 
 jni/../../Classes/EziSocialDelegate.h:
 
+jni/../../Classes/EziFacebookUser.h:
+
 jni/../../Classes/HelloWorldScene.h:
 
 jni/../../Classes/EziSocialObject.h:
 
 jni/../../Classes/EziSocialDefinition.h:
+
+jni/../../Classes/EziFacebookFriend.h:

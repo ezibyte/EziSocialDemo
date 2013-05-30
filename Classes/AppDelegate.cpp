@@ -1,16 +1,12 @@
-#include "AppDelegate.h"
-
-#include "cocos2d.h"
-#include "HelloWorldScene.h"
-
 //
 //  AppDelegate.cpp
-//  EziScoailDemo
+//  EziSocial
 //
 //  Created by Paras Mendiratta on 11/04/13.
-//  EziByte (http://www.ezibyte.com)
+//  Copyright @EziByte 2013 (http://www.ezibyte.com)
 //
-
+//  Version 1.2 (Dt: 30-May-2013)
+//
 /***
  
  This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
@@ -25,11 +21,17 @@
  
  */
 
+
+#include "AppDelegate.h"
+
+#include "cocos2d.h"
+#include "HelloWorldScene.h"
+
 USING_NS_CC;
 
 AppDelegate::AppDelegate()
 {
-
+    
 }
 
 AppDelegate::~AppDelegate()
@@ -41,19 +43,19 @@ bool AppDelegate::applicationDidFinishLaunching()
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
-
+    
     // turn on display FPS
     pDirector->setDisplayStats(false);
-
+    
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
-
+    
     // create a scene. it's an autorelease object
     CCScene *pScene = HelloWorld::scene();
-
+    
     // run
     pDirector->runWithScene(pScene);
-
+    
     return true;
 }
 
@@ -61,7 +63,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 void AppDelegate::applicationDidEnterBackground()
 {
     CCDirector::sharedDirector()->pause();
-
+    
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
 }

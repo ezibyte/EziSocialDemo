@@ -202,7 +202,8 @@ obj/local/armeabi/objs/game_shared/hellocpp/main.o: jni/hellocpp/main.cpp \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/touch_dispatcher/CCTouchDispatcher.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/CCScheduler.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h \
- jni/../../Classes/EziSocialDelegate.h
+ jni/../../Classes/EziSocialDelegate.h \
+ jni/../../Classes/EziFacebookUser.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -611,3 +612,5 @@ jni/../../Classes/HelloWorldScene.h:
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h:
 
 jni/../../Classes/EziSocialDelegate.h:
+
+jni/../../Classes/EziFacebookUser.h:

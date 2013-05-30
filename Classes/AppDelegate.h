@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  EziScoailDemo
+//  EziSocial
 //
 //  Created by Paras Mendiratta on 11/04/13.
 //  EziByte (http://www.ezibyte.com)

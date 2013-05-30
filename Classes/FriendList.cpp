@@ -3,10 +3,10 @@
 //  EziSocialDemo
 //
 //  Created by Paras Mendiratta on 04/05/13.
+//  Copyright @EziByte 2013 (http://www.ezibyte.com)
 //
+//  Version 1.2 (Dt: 30-May-2013)
 //
-
-
 /***
  
  This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
@@ -24,6 +24,7 @@
 #include "FriendList.h"
 #include "HelloWorldScene.h"
 #include "EziSocialObject.h"
+#include "EziFacebookFriend.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -60,11 +61,11 @@ bool FriendList::init()
     CCSize winSize = CCDirector::sharedDirector()->getVisibleSize();
     SCREEN_WIDTH  = winSize.width;
     SCREEN_HEIGHT = winSize.height;
-
+    
     CCLayerColor *backgroundLayer = CCLayerColor::create(ccc4(20, 100, 100, 255), SCREEN_WIDTH, SCREEN_HEIGHT);
     
     this->addChild(backgroundLayer);
-
+    
     
     MENU_FONT_SCALE = SCREEN_HEIGHT/320;
     
@@ -72,24 +73,24 @@ bool FriendList::init()
     // Back Menu
     
     CCMenuItemFont *itemBack = CCMenuItemFont::create("Back", this, menu_selector(FriendList::showHomePage));
-	itemBack->setPosition(ccp(SCREEN_WIDTH/2, itemBack->getContentSize().height/2 + 2));
+	itemBack->setPosition(ccp(SCREEN_WIDTH/2, (itemBack->getContentSize().height/2 + 2) * MENU_FONT_SCALE));
 	
     CCMenuItemFont *itemHighScore = CCMenuItemFont::create("High Scores", this, menu_selector(FriendList::showHighScoreList));
     itemHighScore->setAnchorPoint(ccp(1, 0.5));
-    itemHighScore->setPosition(ccp((SCREEN_WIDTH-10), itemBack->getContentSize().height/2 + 2));
-
+    itemHighScore->setPosition(ccp((SCREEN_WIDTH-10), itemBack->getPositionY()));
+    
     CCMenuItemFont *allFriends = CCMenuItemFont::create("All Friends", this, menu_selector(FriendList::showAllFriendsList));
     allFriends->setAnchorPoint(ccp(0, 0.5));
-    allFriends->setPosition(ccp((10), itemBack->getContentSize().height/2 + 2));
-
+    allFriends->setPosition(ccp((10), itemBack->getPositionY()));
+    
     CCMenuItemFont *installedOnly = CCMenuItemFont::create("Installed Only", this, menu_selector(FriendList::showInstalledList));
     installedOnly->setAnchorPoint(ccp(0, 1));
     installedOnly->setPosition(ccp((10), SCREEN_HEIGHT - 2));
-
+    
     CCMenuItemFont *notPlaying = CCMenuItemFont::create("Friends Not Playing", this, menu_selector(FriendList::showNotInstalledList));
     notPlaying->setAnchorPoint(ccp(1, 1));
     notPlaying->setPosition(ccp((SCREEN_WIDTH-10), SCREEN_HEIGHT - 2));
-
+    
     
     
     
@@ -102,9 +103,9 @@ bool FriendList::init()
     CCMenu *menuBack = CCMenu::create(itemBack, itemHighScore, allFriends, installedOnly, notPlaying, NULL);
 	menuBack->setPosition(CCPointZero);
 	addChild(menuBack);
-
+    
     float gap = itemBack->getContentSize().height * 2 * MENU_FONT_SCALE + (10 * MENU_FONT_SCALE);
-
+    
     mFriendList = NULL;
     
     PHOTO_SCALE = SCREEN_HEIGHT/1536;
@@ -117,7 +118,7 @@ bool FriendList::init()
     {
         FB_DEFAULT_PHOTO = "fb_user_icon_quater.jpg";
     }
-        
+    
     
     CCSprite *sprite = CCSprite::create(FB_DEFAULT_PHOTO);
     CELL_HEIGHT = (sprite->getContentSize().height) + (40 * PHOTO_SCALE);
@@ -146,7 +147,7 @@ bool FriendList::init()
 
 
 // ---------------------------------------------
-    #pragma mark - TableView Delegate Methods
+#pragma mark - TableView Delegate Methods
 // ---------------------------------------------
 
 void FriendList::tableCellTouched(CCTableView *table, CCTableViewCell *cell)
@@ -161,45 +162,27 @@ CCSize FriendList::cellSizeForTable(CCTableView *table)
 
 CCTableViewCell* FriendList::tableCellAtIndex(CCTableView *table, unsigned int idx)
 {
-    CCDictionary* friendDetails = (CCDictionary*)mFriendList->objectAtIndex(idx);
-    CCString* friendID          = (CCString*)friendDetails->objectForKey("id");
-    CCString* friendName        = (CCString*)friendDetails->objectForKey("name");
-    CCString* installed         = NULL;
-    CCString* score             = NULL;
-    CCSprite* profilePic        = NULL;
+    EziFacebookFriend* friendDetails = (EziFacebookFriend*)mFriendList->objectAtIndex(idx);
+    std::string friendID            = friendDetails->getFBID();
+    std::string friendName          = friendDetails->getName();
+    std::string installed           = "";
+    std::string score               = "";
+    CCSprite* profilePic            = NULL;
     
-    //if (mEnableHighScoreDisplay)
+    // Set the score.
+    long mylong = friendDetails->getScore();
+    std::stringstream mystream;
+    mystream << mylong;
+    score = mystream.str();
+    
+    // Set the install status
+    if (friendDetails->isInstalled())
     {
-        if (friendDetails->objectForKey("score") != NULL)
-        {
-            score = (CCString*)friendDetails->objectForKey("score");
-        }
-        else
-        {
-            score = CCString::create("0");
-        }
+        installed = "Installed";
     }
-    
-    //if (mEnableInstalledDisplay)
+    else
     {
-        if (friendDetails->objectForKey("installed") != NULL)
-        {
-            CCString* value = (CCString*)friendDetails->objectForKey("installed");
-            
-            if (value->m_sString.compare("1") == 0)
-            {
-                installed = CCString::create("Installed");
-            }
-            else
-            {
-                installed = CCString::create("Not Installed");
-            }
-        }
-        else
-        {
-            installed = CCString::create("Not Installed");
-        }
-        
+        installed = "Not Installed";
     }
     
     
@@ -216,9 +199,9 @@ CCTableViewCell* FriendList::tableCellAtIndex(CCTableView *table, unsigned int i
         
         CCSprite *sprite = NULL;
         
-        if (friendDetails->objectForKey("photo") != NULL)
+        if (strcmp(friendDetails->getPhotoPath(), "") != 0)
         {
-            const char*  picPath = ((CCString*)friendDetails->objectForKey("photo"))->getCString();
+            const char*  picPath = friendDetails->getPhotoPath();
             sprite = CCSprite::create(picPath);
         }
         else
@@ -231,18 +214,14 @@ CCTableViewCell* FriendList::tableCellAtIndex(CCTableView *table, unsigned int i
             CCLOG("Sprite is NULL");
         }
         
-        //if (sprite)
-        {
-            //sprite->setScale(PHOTO_SCALE);
-            sprite->setAnchorPoint(ccp(0, 0.5));
-            sprite->setPosition(ccp(20, CELL_HEIGHT/2));
-            cell->addChild(sprite);
-            //sprite->setScale(0.9);
-            sprite->setTag(FRIEND_PHOTO_TAG);
-        }
+        sprite->setAnchorPoint(ccp(0, 0.5));
+        sprite->setPosition(ccp(20, CELL_HEIGHT/2));
+        cell->addChild(sprite);
+        //sprite->setScale(0.9);
+        sprite->setTag(FRIEND_PHOTO_TAG);
         
         // Friend Facebook ID
-        CCLabelTTF *friendIDLabel = CCLabelTTF::create(friendID->getCString(), "Helvetica", 20.0 * MENU_FONT_SCALE);
+        CCLabelTTF *friendIDLabel = CCLabelTTF::create(friendID.c_str(), "Helvetica", 20.0 * MENU_FONT_SCALE);
         
         float gapY =  (CELL_HEIGHT - (friendIDLabel->getContentSize().height * 2)) / 3;
         
@@ -256,7 +235,7 @@ CCTableViewCell* FriendList::tableCellAtIndex(CCTableView *table, unsigned int i
         cell->addChild(friendIDLabel);
         
         // Friend Facebook Name
-        CCLabelTTF *friendNameLabel = CCLabelTTF::create(friendName->getCString(), "Helvetica", 20.0 * MENU_FONT_SCALE);
+        CCLabelTTF *friendNameLabel = CCLabelTTF::create(friendName.c_str(), "Helvetica", 20.0 * MENU_FONT_SCALE);
         friendNameLabel->setPosition(ccp(friendIDLabel->getPositionX(),
                                          friendIDLabel->getPositionY() - friendIDLabel->getContentSize().height - gapY));
         
@@ -264,77 +243,67 @@ CCTableViewCell* FriendList::tableCellAtIndex(CCTableView *table, unsigned int i
         friendNameLabel->setTag(FRIEND_NAME_LABEL_TAG);
         cell->addChild(friendNameLabel);
         
-        //if (mEnableHighScoreDisplay)
-        {
-            // High Score
-            CCLabelTTF *scoreLabel = CCLabelTTF::create(score->getCString(), "Helvetica", 20.0 * MENU_FONT_SCALE);
-            scoreLabel->setPosition(ccp(SCREEN_WIDTH - 20, friendIDLabel->getPositionY()));
-            
-            scoreLabel->setAnchorPoint(ccp(1, 1));
-            scoreLabel->setTag(FRIEND_SCORE_LABEL_TAG);
-            cell->addChild(scoreLabel);
-
-        }
         
-        //if (mEnableInstalledDisplay)
-        {
-            // Installed String
-            CCLabelTTF *installedLabel = CCLabelTTF::create(installed->getCString(), "Helvetica", 20.0 * MENU_FONT_SCALE);
-            installedLabel->setPosition(ccp(SCREEN_WIDTH - 20, friendNameLabel->getPositionY()));
-            
-            installedLabel->setAnchorPoint(ccp(1, 1));
-            installedLabel->setTag(FRIEND_INSTALLED_LABEL_TAG);
-            cell->addChild(installedLabel);
-        }
+        // High Score
+        CCLabelTTF *scoreLabel = CCLabelTTF::create(score.c_str(), "Helvetica", 20.0 * MENU_FONT_SCALE);
+        scoreLabel->setPosition(ccp(SCREEN_WIDTH - 20, friendIDLabel->getPositionY()));
+        
+        scoreLabel->setAnchorPoint(ccp(1, 1));
+        scoreLabel->setTag(FRIEND_SCORE_LABEL_TAG);
+        cell->addChild(scoreLabel);
+        
+        // Installed String
+        CCLabelTTF *installedLabel = CCLabelTTF::create(installed.c_str(), "Helvetica", 20.0 * MENU_FONT_SCALE);
+        installedLabel->setPosition(ccp(SCREEN_WIDTH - 20, friendNameLabel->getPositionY()));
+        
+        installedLabel->setAnchorPoint(ccp(1, 1));
+        installedLabel->setTag(FRIEND_INSTALLED_LABEL_TAG);
+        cell->addChild(installedLabel);
+        
     }
     else
     {
         
         // Set the Friend ID
         CCLabelTTF *friendIDLabel = (CCLabelTTF*)cell->getChildByTag(FRIEND_ID_LABEL_TAG);
-        friendIDLabel->setString(friendID->getCString());
+        friendIDLabel->setString(friendID.c_str());
         
         // Set the Friend Name
         CCLabelTTF *friendNameLabel = (CCLabelTTF*)cell->getChildByTag(FRIEND_NAME_LABEL_TAG);
-        friendNameLabel->setString(friendName->getCString());
+        friendNameLabel->setString(friendName.c_str());
         
-        //if (mEnableHighScoreDisplay)
+        
+        CCLabelTTF *highScoreLabel = (CCLabelTTF*)cell->getChildByTag(FRIEND_SCORE_LABEL_TAG);
+        if (highScoreLabel != NULL)
         {
-            CCLabelTTF *highScoreLabel = (CCLabelTTF*)cell->getChildByTag(FRIEND_SCORE_LABEL_TAG);
-            if (score != NULL && highScoreLabel != NULL)
-            {
-                highScoreLabel->setString(score->getCString());
-            }
-            
-            highScoreLabel->setVisible(mEnableHighScoreDisplay);
-            
-
+            highScoreLabel->setString(score.c_str());
         }
-
-        //if (mEnableInstalledDisplay)
+        
+        highScoreLabel->setVisible(mEnableHighScoreDisplay);
+        
+        
+        CCLabelTTF *installedLabel = (CCLabelTTF*)cell->getChildByTag(FRIEND_INSTALLED_LABEL_TAG);
+        if (installedLabel != NULL)
         {
-            CCLabelTTF *installedLabel = (CCLabelTTF*)cell->getChildByTag(FRIEND_INSTALLED_LABEL_TAG);
-            if (installed != NULL && installedLabel != NULL)
-            {
-                installedLabel->setString(installed->getCString());
-            }
-            installedLabel->setVisible(mEnableInstalledDisplay);
+            installedLabel->setString(installed.c_str());
         }
+        installedLabel->setVisible(mEnableInstalledDisplay);
+        
         
         CCSprite* cellProfilePic = (CCSprite*)cell->getChildByTag(FRIEND_PHOTO_TAG);
         
-        if (friendDetails->objectForKey("photo") != NULL)
+        if (strcmp("", friendDetails->getPhotoPath()) != 0 )
         {
-            const char*  picPath = ((CCString*)friendDetails->objectForKey("photo"))->getCString();
+            const char*  picPath = friendDetails->getPhotoPath();
             profilePic = CCSprite::create(picPath);
-            //EziSocialObject::sharedObject()->generateCCSprite(picPath);
+            
         }
         else
         {
             profilePic = CCSprite::create(FB_DEFAULT_PHOTO);
         }
-
-    
+        
+        
         cellProfilePic->setTexture(profilePic->getTexture());
     }
     
@@ -351,11 +320,11 @@ unsigned int FriendList::numberOfCellsInTableView(CCTableView *table)
     else
     {
         return mFriendList->count();
-    }    
+    }
 }
 
 // ---------------------------------------------
-    #pragma mark - Menu Callback Methods
+#pragma mark - Menu Callback Methods
 // ---------------------------------------------
 
 
@@ -379,7 +348,7 @@ void FriendList::showAllFriendsList()
     }
     this->showLoadingAction();
     this->unscheduleUpdate();
-    EziSocialObject::sharedObject()->getFriends(EziSocialWrapperNS::FB_FRIEND_SEARCH::ALL_FRIENDS, 0, 20);
+    EziSocialObject::sharedObject()->getFriends(EziSocialWrapperNS::FB_FRIEND_SEARCH::ALL_FRIENDS, 20, 20);
 }
 
 void FriendList::showHighScoreList()
@@ -393,7 +362,7 @@ void FriendList::showHighScoreList()
     {
         ALL_DOWNLOAD_COMPLETE = false;
     }
-
+    
     this->showLoadingAction();
     this->unscheduleUpdate();
     EziSocialObject::sharedObject()->getHighScores();
@@ -410,7 +379,7 @@ void FriendList::showInstalledList()
     {
         ALL_DOWNLOAD_COMPLETE = false;
     }
-
+    
     this->showLoadingAction();
     this->unscheduleUpdate();
     EziSocialObject::sharedObject()->getFriends(EziSocialWrapperNS::FB_FRIEND_SEARCH::ONLY_INSTALLED, 0, 10);
@@ -427,14 +396,14 @@ void FriendList::showNotInstalledList()
     {
         ALL_DOWNLOAD_COMPLETE = false;
     }
-
+    
     this->showLoadingAction();
     this->unscheduleUpdate();
     EziSocialObject::sharedObject()->getFriends(EziSocialWrapperNS::FB_FRIEND_SEARCH::ONLY_NOT_INSTALLED, 0, 10);
 }
 
 // ---------------------------------------------
-    #pragma mark - Helper Private Methods
+#pragma mark - Helper Private Methods
 // ---------------------------------------------
 
 void FriendList::setFriendsData(cocos2d::CCArray* friendList)
@@ -448,7 +417,7 @@ void FriendList::setFriendsData(cocos2d::CCArray* friendList)
     
     this->mFriendList = CCArray::createWithArray(friendList);
     this->mFriendList->retain();
- 
+    
     if (mFriendList->count() <= 0)
     {
         ALL_DOWNLOAD_COMPLETE = true;
@@ -456,7 +425,7 @@ void FriendList::setFriendsData(cocos2d::CCArray* friendList)
         return;
     }
     
-    mPhotoLoadIndex = friendList->count();    
+    mPhotoLoadIndex = friendList->count();
     this->mTableView->reloadData();
     
     mReadyForNextDownload = true;
@@ -468,9 +437,7 @@ void FriendList::downloadNextPhoto()
     if (mPhotoLoadIndex > 0)
     {
         mPhotoLoadIndex--;
-        CCDictionary* friendDetails = (CCDictionary*)mFriendList->objectAtIndex(mPhotoLoadIndex);
-        CCString* userID = (CCString*)(friendDetails->objectForKey("id"));
-        
+        EziFacebookFriend* friendDetails = (EziFacebookFriend*)mFriendList->objectAtIndex(mPhotoLoadIndex);
         
         unsigned int size = 200;
         
@@ -483,16 +450,14 @@ void FriendList::downloadNextPhoto()
             size = 50;
         }
         
-        EziSocialObject::sharedObject()->getProfilePicForID(userID->getCString(),
-                                                            size, size, false);        
+        EziSocialObject::sharedObject()->getProfilePicForID(friendDetails->getFBID(),
+                                                            size, size, false);
     }
     else
     {
         this->unscheduleUpdate();
         ALL_DOWNLOAD_COMPLETE = true;
         this->hideLoadingAction();
-        
-        //this->mTableView->reloadData();
     }
 }
 
@@ -504,7 +469,7 @@ void FriendList::showLoadingAction()
     repeatAction->retain();
     
     mLoadingImage->runAction(repeatAction);
-
+    
 }
 
 void FriendList::hideLoadingAction()
@@ -514,7 +479,7 @@ void FriendList::hideLoadingAction()
 }
 
 // ---------------------------------------------
-    #pragma mark - CCLayer Delegate Methods
+#pragma mark - CCLayer Delegate Methods
 // ---------------------------------------------
 
 void FriendList::update(float delta)
@@ -528,30 +493,70 @@ void FriendList::update(float delta)
 }
 
 // ---------------------------------------------
-    #pragma mark - Facebook Delegate Methods
+#pragma mark - Facebook Delegate Methods
 // ---------------------------------------------
 
 
-void FriendList::fbFriendsCallback(CCArray *friends)
+void FriendList::fbFriendsCallback(int responseCode, const char* responseMessage, CCArray *friends)
 {
-    mEnableHighScoreDisplay = false;
-    mEnableInstalledDisplay = true;
-    this->setFriendsData(friends);
+    if (responseCode == EziSocialWrapperNS::RESPONSE_CODE::FB_FRIEND_GET_ERROR || responseCode == EziSocialWrapperNS::RESPONSE_CODE::ERROR_INTERNET_NOT_AVAILABLE)
+    {
+        CCMessageBox(responseMessage, "Friends List - Error");
+        this->hideLoadingAction();
+        ALL_DOWNLOAD_COMPLETE = true;
+    }
+    else
+    {
+        
+        
+        if (friends != NULL && friends->count() > 0)
+        {
+            
+            mEnableHighScoreDisplay = false;
+            mEnableInstalledDisplay = true;
+            this->setFriendsData(friends);
+            CCMessageBox(responseMessage, "Friends List");
+        }
+        else
+        {
+            this->hideLoadingAction();
+            ALL_DOWNLOAD_COMPLETE = true;
+            CCMessageBox("Zero Friends Fetched", "Friends List");
+        }
+    }
 }
 
-void FriendList::fbHighScoresCallback(CCArray *highScores)
+void FriendList::fbHighScoresCallback(int responseCode, const char* responseMessage, CCArray *highScores)
 {
-    mEnableInstalledDisplay = false;
-    mEnableHighScoreDisplay = true;
-    this->setFriendsData(highScores);
+    if (responseCode == EziSocialWrapperNS::RESPONSE_CODE::FB_HIGH_SCORE_GET_ERROR || responseCode == EziSocialWrapperNS::RESPONSE_CODE::ERROR_INTERNET_NOT_AVAILABLE)
+    {
+        CCMessageBox(responseMessage, "High Score - Error");
+        this->hideLoadingAction();
+        ALL_DOWNLOAD_COMPLETE = true;
+    }
+    else
+    {
+        
+        if (highScores != NULL && highScores->count() > 0)
+        {
+            mEnableInstalledDisplay = false;
+            mEnableHighScoreDisplay = true;
+            this->setFriendsData(highScores);
+            CCMessageBox(responseMessage, "High Score");
+        }
+        else
+        {
+            this->hideLoadingAction();
+            ALL_DOWNLOAD_COMPLETE = true;
+            CCMessageBox("None of your friend is playing", "High Score");
+        }
+    }
 }
 
 void FriendList::fbUserPhotoCallback(const char *userPhotoPath)
 {
-    //CCLOG("Photo Downloaded = %s", userPhotoPath);
-    
-    CCDictionary* friendDetails = (CCDictionary*)mFriendList->objectAtIndex(mPhotoLoadIndex);
-    friendDetails->setObject(CCString::create(userPhotoPath), "photo");
+    EziFacebookFriend* friendDetails = (EziFacebookFriend*)mFriendList->objectAtIndex(mPhotoLoadIndex);
+    friendDetails->setPhotoPath(userPhotoPath);
     
     mReadyForNextDownload = true;
 }

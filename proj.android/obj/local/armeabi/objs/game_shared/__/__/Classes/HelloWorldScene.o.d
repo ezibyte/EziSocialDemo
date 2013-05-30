@@ -229,6 +229,7 @@ obj/local/armeabi/objs/game_shared/__/__/Classes/HelloWorldScene.o: \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/CCScheduler.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h \
  jni/../../Classes/EziSocialDelegate.h \
+ jni/../../Classes/EziFacebookUser.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../CocosDenshion/android/../include/SimpleAudioEngine.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../CocosDenshion/android/../include/Export.h \
  jni/../../Classes/EziSocialObject.h \
@@ -307,7 +308,10 @@ obj/local/armeabi/objs/game_shared/__/__/Classes/HelloWorldScene.o: \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpRequest.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpClient.h \
- /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h \
+ jni/../../Classes/EziFBIncomingRequestManager.h \
+ jni/../../Classes/EziFBIncomingRequest.h \
+ jni/../../Classes/EziFacebookFriend.h jni/../../Classes/RequestList.h
 
 jni/../../Classes/HelloWorldScene.h:
 
@@ -767,6 +771,8 @@ jni/../../Classes/HelloWorldScene.h:
 
 jni/../../Classes/EziSocialDelegate.h:
 
+jni/../../Classes/EziFacebookUser.h:
+
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../CocosDenshion/android/../include/SimpleAudioEngine.h:
 
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../CocosDenshion/android/../include/Export.h:
@@ -926,3 +932,11 @@ jni/../../Classes/FriendList.h:
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpClient.h:
 
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h:
+
+jni/../../Classes/EziFBIncomingRequestManager.h:
+
+jni/../../Classes/EziFBIncomingRequest.h:
+
+jni/../../Classes/EziFacebookFriend.h:
+
+jni/../../Classes/RequestList.h:

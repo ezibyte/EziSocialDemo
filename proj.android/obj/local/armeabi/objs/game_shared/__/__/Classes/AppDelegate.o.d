@@ -229,7 +229,8 @@ obj/local/armeabi/objs/game_shared/__/__/Classes/AppDelegate.o: \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/CCScheduler.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h \
  jni/../../Classes/HelloWorldScene.h \
- jni/../../Classes/EziSocialDelegate.h
+ jni/../../Classes/EziSocialDelegate.h \
+ jni/../../Classes/EziFacebookUser.h
 
 jni/../../Classes/AppDelegate.h:
 
@@ -692,3 +693,5 @@ jni/../../Classes/AppDelegate.h:
 jni/../../Classes/HelloWorldScene.h:
 
 jni/../../Classes/EziSocialDelegate.h:
+
+jni/../../Classes/EziFacebookUser.h:

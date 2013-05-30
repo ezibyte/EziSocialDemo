@@ -1,12 +1,11 @@
 //
 //  FriendList.h
-//  EziSocialDemo
-//
-//  Created by Paras Mendiratta on 04/05/13.
-//
-//
+//  EziSocial
 
-
+//  Copyright @EziByte 2013 (http://www.ezibyte.com)
+//
+//  Version 1.2 (Dt: 30-May-2013)
+//
 /***
  
  This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
@@ -29,15 +28,16 @@
 #include "EziSocialDelegate.h"
 
 class FriendList : public cocos2d::CCLayer,
-                   public cocos2d::extension::CCTableViewDataSource,
-                   public cocos2d::extension::CCTableViewDelegate,
-                   public EziFacebookDelegate
+public cocos2d::extension::CCTableViewDataSource,
+public cocos2d::extension::CCTableViewDelegate,
+public EziFacebookDelegate
+
 {
     
 public:
     
     virtual bool init();
-                
+    
     CREATE_FUNC(FriendList);
     
     // TableView Delegate Methods...
@@ -49,21 +49,9 @@ public:
     virtual unsigned int numberOfCellsInTableView(cocos2d::extension::CCTableView *table);
     
     // Facebook Delegate Methods...
-    virtual void fbSessionCallback(int responseCode) {}
-    virtual void fbUserDetailCallback(cocos2d::CCDictionary* data) {}
-    virtual void fbMessageCallback(int responseCode) {}
-    virtual void fbPageLikeCallback(int responseCode) {}
-    virtual void fbFriendsCallback(cocos2d::CCArray* friends);
-    virtual void fbHighScoresCallback(cocos2d::CCArray* highScores);
+    virtual void fbFriendsCallback(int responseCode, const char* responseMessage, cocos2d::CCArray* friends);
+    virtual void fbHighScoresCallback(int responseCode, const char* responseMessage, cocos2d::CCArray* highScores);
     virtual void fbUserPhotoCallback(const char *userPhotoPath);
-    
-    virtual void fbSendRequestCallback(int responseCode, cocos2d::CCArray* friendsGotRequests) {}
-    virtual void fbRecieveRequestCallback(int responseCode,
-                                          const char* message,
-                                          const char* senderName,
-                                          cocos2d::CCDictionary* dataDictionary) {}
-    
-
     
     void setFriendsData(cocos2d::CCArray* friendList);
     
@@ -93,7 +81,7 @@ private:
     bool mReadyForNextDownload;
 };
 
-    
+
 
 
 #endif

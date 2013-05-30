@@ -1,10 +1,11 @@
 //
 //  HelloWorldScene.h
-//  EziSocialDemo
-//
-// EziByte (http://www.ezibyte.com)
-//
+//  EziSocial
 
+//  Copyright @EziByte 2013 (http://www.ezibyte.com)
+//
+//  Version 1.2 (Dt: 30-May-2013)
+//
 /***
  
  This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
@@ -24,10 +25,12 @@
 
 #include "cocos2d.h"
 #include "EziSocialDelegate.h"
+#include "EziFacebookUser.h"
 
 class HelloWorld :  public cocos2d::CCLayer,
 public EziFacebookDelegate,
-public EziEmailDelegate
+public EziEmailDelegate,
+public EziTwitterDelegate
 {
     
 public:
@@ -46,24 +49,23 @@ public:
     CREATE_FUNC(HelloWorld);
     
     // Facebook Delegate Methods
-    virtual void fbSessionCallback(int responseCode);
-    virtual void fbUserDetailCallback(cocos2d::CCDictionary* data);
-    virtual void fbMessageCallback(int responseCode);
-    virtual void fbPageLikeCallback(int responseCode);
-    virtual void fbFriendsCallback(cocos2d::CCArray* friends);
-    virtual void fbHighScoresCallback(cocos2d::CCArray* highScores);
+    virtual void fbSessionCallback(int responseCode, const char* responseMessage);
+    virtual void fbUserDetailCallback(int responseCode, const char* responseMessage, EziFacebookUser *fbUser);
+    virtual void fbMessageCallback(int responseCode, const char* responseMessage);
+    virtual void fbPageLikeCallback(int responseCode, const char* responseMessage);
+    
     virtual void fbUserPhotoCallback(const char *userPhotoPath);
     
-    virtual void fbSendRequestCallback(int responseCode, cocos2d::CCArray* friendsGotRequests);
-    virtual void fbRecieveRequestCallback(int responseCode,
-                                          const char* message,
-                                          const char* senderName,
-                                          cocos2d::CCDictionary* dataDictionary);
+    virtual void fbSendRequestCallback(int responseCode, const char* responseMessage, cocos2d::CCArray* friendsGotRequests);
+    virtual void fbPostPhotoCallback(int responseCode, const char* responseMessage);
     
+    virtual void fbIncomingRequestCallback(int responseCode, const char* responseMessage, int totalIncomingRequests);
     
     // EMail Delegate
     virtual void mailCallback(int responseCode);
     
+    // Twitter Callback
+    virtual void twitterCallback(int responseCode);
     
     
 private:
@@ -76,6 +78,8 @@ private:
     float SCALE_FACTOR;
     float GAP;
     
+    
+    cocos2d::CCLabelTTF* pendingRequestCount;
     
     cocos2d::CCArray* _highScores;
     cocos2d::CCArray* _highScorePlayerNames;
@@ -102,6 +106,8 @@ private:
     
     cocos2d::CCSprite *mBallSprite;
     
+    EziFacebookUser* mCurrentFacebookUser;
+    
     
     // Preparing Pages
     void prepareLoginPage();
@@ -117,6 +123,7 @@ private:
     void showFacebookActionPage();
     void showTwitterActionPage();
     void showHighScorePage(cocos2d::CCArray* highScoreList);
+    void showRequestList();
     
     // Facebook Action Items
     void loginViaFacebook();
@@ -131,6 +138,8 @@ private:
     void openFacebookPage();
     void getUserPhoto();
     
+    void postPhoto();
+    
     // Facebook Requests
     void sendGiftsToFriends();
     void challengeFriends();
@@ -139,7 +148,10 @@ private:
     void checkSessionStatus();
     
     // Twitter Action Items
+    void loginViaTwitter();
     void tweetMessage();
+    void logoutFromTwitter();
+    void checkIfUserFollowingMyTwitterID();
     
     // Sending Email
     void sendEmail();
@@ -152,5 +164,4 @@ private:
                          cocos2d::CCLabelTTF* labelToPlace);
     
 };
-
 #endif // __HELLOWORLD_SCENE_H__

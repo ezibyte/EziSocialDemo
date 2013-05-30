@@ -199,6 +199,7 @@ obj/local/armeabi/objs/game_shared/__/__/Classes/EziSocialObject.o: \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/touch_dispatcher/CCTouchDispatcher.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/CCScheduler.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h \
+ jni/../../Classes/EziFacebookUser.h \
  jni/../../Classes/EziSocialDefinition.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/cocos-ext.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/ExtensionMacros.h \
@@ -274,7 +275,10 @@ obj/local/armeabi/objs/game_shared/__/__/Classes/EziSocialObject.o: \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpRequest.h \
  /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpClient.h \
- /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h \
+ jni/../../Classes/EziFBIncomingRequestManager.h \
+ jni/../../Classes/EziFBIncomingRequest.h \
+ jni/../../Classes/EziFacebookFriend.h
 
 jni/../../Classes/EziSocialObject.h:
 
@@ -674,6 +678,8 @@ jni/../../Classes/EziSocialDelegate.h:
 
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/data_support/uthash.h:
 
+jni/../../Classes/EziFacebookUser.h:
+
 jni/../../Classes/EziSocialDefinition.h:
 
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/cocos-ext.h:
@@ -825,3 +831,9 @@ jni/../../Classes/EziSocialDefinition.h:
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpClient.h:
 
 /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../extensions/network/HttpResponse.h:
+
+jni/../../Classes/EziFBIncomingRequestManager.h:
+
+jni/../../Classes/EziFBIncomingRequest.h:
+
+jni/../../Classes/EziFacebookFriend.h:

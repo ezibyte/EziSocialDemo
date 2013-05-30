@@ -8,10 +8,15 @@ LOCAL_MODULE_FILENAME := libgame
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
-                   ../../Classes/EziSocialObject.cpp \
-                   ../../Classes/JNI_EziSocialManager.cpp \
                    ../../Classes/HelloWorldScene.cpp \
-                   ../../Classes/FriendList.cpp
+                   ../../Classes/EziSocialObject.cpp \
+				   ../../Classes/JNI_EziSocialManager.cpp \
+				   ../../Classes/RequestList.cpp \
+				   ../../Classes/EziFBIncomingRequestManager.cpp \
+				   ../../Classes/EziFacebookUser.cpp \
+				   ../../Classes/EziFBIncomingRequest.cpp \
+				   ../../Classes/EziFacebookFriend.cpp \
+				   ../../Classes/FriendList.cpp
                    
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes                   
 
