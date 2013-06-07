@@ -751,7 +751,11 @@ void HelloWorld::sendGiftsToFriends()
     
     giftDictionary->setObject(CCString::create("500"), "GOLD_COINS");
     giftDictionary->setObject(CCString::create("1"), "LIFE");
-    
+
+    /*
+     
+     // Use preselected friends if you need to send the gift to particular friends only.
+     
     CCArray *preselectFriends = CCArray::create();
     
     preselectFriends->addObject(CCString::create("100000706355105"));
@@ -761,6 +765,14 @@ void HelloWorld::sendGiftsToFriends()
                                                           "I am sending you 500 gold coins & 1 extra life. Enjoy!",
                                                           preselectFriends,
                                                           giftDictionary);
+    */
+    
+    EziSocialObject::sharedObject()->sendRequestToFriends(EziSocialWrapperNS::FB_REQUEST::REQUEST_GIFT,
+                                                          "I am sending you 500 gold coins & 1 extra life. Enjoy!",
+                                                          NULL,
+                                                          giftDictionary);
+
+    
 }
 
 void HelloWorld::challengeFriends()
