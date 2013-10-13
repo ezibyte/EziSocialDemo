@@ -1,7 +1,7 @@
 obj/local/armeabi/objs/cocos2dx_static/support/zip_support/ioapi.o: \
- /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/zip_support/ioapi.cpp \
- /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/zip_support/ioapi.h \
- /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/platform/CCPlatformConfig.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/support/zip_support/ioapi.cpp \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/support/zip_support/ioapi.h \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/stdio.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -27,9 +27,9 @@ obj/local/armeabi/objs/cocos2dx_static/support/zip_support/ioapi.o: \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/zlib.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/zconf.h
 
-/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/zip_support/ioapi.h:
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/support/zip_support/ioapi.h:
 
-/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/platform/CCPlatformConfig.h:
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/platform/CCPlatformConfig.h:
 
 /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/stdio.h:
 

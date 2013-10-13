@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="Cocos2D-X Src"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Cocos2dx_Src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
-	<classpathentry exported="true" kind="lib" path="/Users/codesnooker/MacOSX/Development/Projects/Plugin-Release/EziSocial/Android/libEziSocial.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/ezibyte/ezisocial/android/libEziSocialPlugin.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

@@ -1,37 +1,18 @@
-//
-//  AppDelegate.cpp
-//  EziSocial
-//
-//  Created by Paras Mendiratta on 11/04/13.
-//  Copyright @EziByte 2013 (http://www.ezibyte.com)
-//
-//  Version 1.2 (Dt: 30-May-2013)
-//
-/***
- 
- This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
- 
- Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
- 
- 1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
- 
- 2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
- 
- 3. This notice may not be removed or altered from any source distribution.
- 
- */
-
-
 #include "AppDelegate.h"
 
 #include "cocos2d.h"
-#include "HelloWorldScene.h"
+#include "SplashScene.h"
+#include "EziSocialObject.h"
 
 USING_NS_CC;
 
+float AppDelegate::SCREEN_WIDTH         = 640;
+float AppDelegate::SCREEN_HEIGHT        = 960;
+float AppDelegate::SCREEN_SCALE_FACTOR  = 1.0f;
+
 AppDelegate::AppDelegate()
 {
-    
+
 }
 
 AppDelegate::~AppDelegate()
@@ -43,18 +24,54 @@ bool AppDelegate::applicationDidFinishLaunching()
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
-    
+
+
     // turn on display FPS
     pDirector->setDisplayStats(false);
-    
+
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
     
-    // create a scene. it's an autorelease object
-    CCScene *pScene = HelloWorld::scene();
+    AppDelegate::SCREEN_SCALE_FACTOR = CCDirector::sharedDirector()->getVisibleSize().width / 960.0f;
+    AppDelegate::SCREEN_WIDTH  = CCDirector::sharedDirector()->getWinSizeInPixels().width;
+    AppDelegate::SCREEN_HEIGHT = CCDirector::sharedDirector()->getWinSize().height;
     
+    CCLOG("W, H = %f, %f", AppDelegate::SCREEN_WIDTH, AppDelegate::SCREEN_HEIGHT);
+    
+    //pDirector->setContentScaleFactor(SCREEN_SCALE_FACTOR);
+    
+    std::vector<std::string> searchPath;
+    
+    if (AppDelegate::SCREEN_HEIGHT > 768)
+    {
+        searchPath.push_back("HDR");
+        CCLOG("Using HDR Directory");
+        //pDirector->setContentScaleFactor(MAX(AppDelegate::SCREEN_WIDTH/2048.0f, AppDelegate::SCREEN_HEIGHT/1536.0f));
+    }
+    else if (AppDelegate::SCREEN_HEIGHT > 320)
+    {
+        searchPath.push_back("HD");
+        //pDirector->setContentScaleFactor(MIN(AppDelegate::SCREEN_WIDTH/1024.0f, AppDelegate::SCREEN_HEIGHT/768.0f));
+        CCLOG("Using HD Directory with scaleFactor = %f", pDirector->getContentScaleFactor());
+        //CCEGLView::sharedOpenGLView()->setDesignResolutionSize(AppDelegate::SCREEN_WIDTH, AppDelegate::SCREEN_HEIGHT, kResolutionNoBorder);
+    }
+    else
+    {
+        searchPath.push_back("SD");
+        CCLOG("Using SD Directory");
+        //pDirector->setContentScaleFactor(AppDelegate::SCREEN_HEIGHT/320.0f);
+    }
+    
+    CCFileUtils::sharedFileUtils()->setSearchPaths(searchPath);
+    
+    // create a scene. it's an autorelease object
+    CCScene *pScene = SplashScene::scene();
+
     // run
     pDirector->runWithScene(pScene);
+    
+    EziSocialObject::sharedObject()->setAutoCheckIncomingRequestsOnAppLaunch(true);
+
     
     return true;
 }
@@ -63,7 +80,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 void AppDelegate::applicationDidEnterBackground()
 {
     CCDirector::sharedDirector()->pause();
-    
+
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
 }

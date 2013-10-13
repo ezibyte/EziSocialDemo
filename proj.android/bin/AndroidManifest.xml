@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.test.SocialDemo"
-      android:versionCode="1"
+      package="com.ezibyte.ezisocialdemoapp"
+      android:versionCode="100"
       android:versionName="1.0" android:installLocation="auto">
 
     <uses-sdk android:minSdkVersion="8"/>
     <uses-feature android:glEsVersion="0x00020000" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application android:label="@string/app_name"
         android:icon="@drawable/icon">
 
-        <activity android:name=".EziSocialDemo"
+        <activity android:name="com.ezibyte.ezisocialdemoapp.EziSocialDemo"
                   android:label="@string/app_name"
                   android:screenOrientation="landscape"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
@@ -22,11 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.facebook.LoginActivity"/>
-        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        <activity android:name="com.facebook.LoginActivity"></activity>
     </application>
     <supports-screens android:largeScreens="true"
                       android:smallScreens="true"
                       android:anyDensity="true"
                       android:normalScreens="true"/>
-</manifest> 
+                         
+                         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+                         <uses-permission android:name="android.permission.INTERNET"/>
+                         <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+</manifest>

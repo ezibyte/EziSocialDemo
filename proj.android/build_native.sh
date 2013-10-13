@@ -1,5 +1,6 @@
 APPNAME="EziSocialDemo"
 NDK_ROOT="/Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b"
+
 # options
 
 buildexternalsfromsource=
@@ -37,7 +38,7 @@ fi
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # ... use paths relative to current directory
-COCOS2DX_ROOT="$DIR/../.."
+COCOS2DX_ROOT="$DIR/../../.."
 APP_ROOT="$DIR/.."
 APP_ANDROID_ROOT="$DIR"
 
@@ -65,21 +66,7 @@ if [ -f "$file" ]; then
 fi
 done
 
-# copy icons (if they exist)
-file="$APP_ANDROID_ROOT"/assets/Icon-72.png
-if [ -f "$file" ]; then
-	cp "$file" "$APP_ANDROID_ROOT"/res/drawable-hdpi/icon.png
-fi
-file="$APP_ANDROID_ROOT"/assets/Icon-48.png
-if [ -f "$file" ]; then
-	cp "$file" "$APP_ANDROID_ROOT"/res/drawable-mdpi/icon.png
-fi
-file="$APP_ANDROID_ROOT"/assets/Icon-32.png
-if [ -f "$file" ]; then
-	cp "$file" "$APP_ANDROID_ROOT"/res/drawable-ldpi/icon.png
-fi
-
-
+# run ndk-build
 if [[ "$buildexternalsfromsource" ]]; then
     echo "Building external dependencies from source"
     "$NDK_ROOT"/ndk-build -C "$APP_ANDROID_ROOT" $* \

@@ -1,5 +1,5 @@
 obj/local/armeabi/objs/cocos2dx_static/support/base64.o: \
- /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/base64.cpp \
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/support/base64.cpp \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/stdio.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/sys/cdefs.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -22,7 +22,7 @@ obj/local/armeabi/objs/cocos2dx_static/support/base64.o: \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/alloca.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/strings.h \
  /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/memory.h \
- /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/base64.h
+ /Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/support/base64.h
 
 /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/stdio.h:
 
@@ -68,4 +68,4 @@ obj/local/armeabi/objs/cocos2dx_static/support/base64.o: \
 
 /Users/codesnooker/MacOSX/Development/tools/android-ndk-r8b/platforms/android-8/arch-arm/usr/include/memory.h:
 
-/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-2.1-x-2.1.2/EziSocialDemo/proj.android/../../cocos2dx/support/base64.h:
+/Users/codesnooker/MacOSX/Development/tools/Cocos2D-X/cocos2d-x-2.2.0/projects/EziSocialDemo/proj.android/../../../cocos2dx/support/base64.h:
